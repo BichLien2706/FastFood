@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Restaurant</title>
+<link rel="icon" href="./img/happyrestauren.png" type="image/x-icon" />
+
+<link rel='stylesheet' type='text/css'
+	href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+<!-- CSS Global Compulsory -->
+<link rel="stylesheet"
+	href="./plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/shop.style.css">
+
+<!-- CSS Header and Footer -->
+<link rel="stylesheet" href="./css/headers/header-v5.css">
+<link rel="stylesheet" href="./css/footers/footer-v4.css">
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="./plugins/animate.css">
+<link rel="stylesheet" href="./plugins/line-icons/line-icons.css">
+<link rel="stylesheet"
+	href="./plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="./plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet"
+	href="./plugins/owl-carousel/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="./plugins/revolution-slider/rs-plugin/css/settings.css">
+
+<!-- CSS Theme -->
+<link rel="stylesheet" href="./css/theme-colors/default.css" id="style_color"> 
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+	<!-- Subiz -->
+	<!-- <script>
+		(function(s, u, b, i, z) {
+			u[i] = u[i] || function() {
+				u[i].t = +new Date();
+				(u[i].q = u[i].q || []).push(arguments);
+			};
+			z = s.createElement('script');
+			var zz = s.getElementsByTagName('script')[0];
+			z.async = 1;
+			z.src = b;
+			z.id = 'subiz-script';
+			zz.parentNode.insertBefore(z, zz);
+		})(document, window, 'https://widgetv4.subiz.com/static/js/app.js',
+				'subiz');
+		subiz('setAccount', 'acqetkhujxyunuatbxzw');
+	</script> -->
+	<!-- End Subiz -->
+<body class="header-fixed">
+	<div class="wrapper">
+		<!--=== Header v5 ===-->
+		<div class="header-v5 header-static">
+			<!-- Topbar v3 -->
+			<div class="topbar-v3">
+				<div class="search-open">
+					<div class="container">
+						<input type="text" class="form-control" placeholder="Search">
+						<div class="search-close">
+							<i class="icon-close"></i>
+						</div>
+					</div>
+				</div>
+			
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<!-- Topbar Navigation -->
+							<ul class="left-topbar">
+								<li><a>Currency (USD)</a>
+									<ul class="currency">
+										<li class="active"><a href="#">USD 
+											<i class="fa fa-check"></i></a>
+										</li>
+										<li><a href="#">VND</a></li>
+									</ul>
+								</li>
+								<li><a>Language (EN)</a>
+									<ul class="language">
+										<li class="active"><a href="#">English (EN)<i
+												class="fa fa-check"></i></a></li>
+										<li><a href="#">VietNam (VN)</a></li>
+									</ul></li>
+							</ul>
+							<!--/end left-topbar-->
+						</div>
+								<div class="col-sm-6">
+									<ul class="list-inline right-topbar pull-right">
+										<li><a href="./login.html">Login</a>
+											| <a href="./register.html">Register</a></li>
+										<li><i class="search fa fa-search search-button"></i></li>
+									</ul>
+								</div>
+			
+			
+					</div>
+				</div>
+			<!-- End Topbar v3 -->
+
+			<!-- Navbar -->
+			<div class="navbar navbar-default mega-menu" role="navigation">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="./">
+							<img style="height: 50px" id="logo-header" src="./img/logo.png" alt="Logo">
+						</a>
+					</div>
+	
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-responsive-collapse">
+						<!-- Shopping Cart -->
+						<ul class="list-inline shop-badge badge-lists badge-icons pull-right">
+							<li><a href="#"><i class="fa fa-shopping-cart"></i></a> 
+							
+								<span class="badge badge-sea rounded-x">0</span>
+						
+								<ul class="list-unstyled badge-open mCustomScrollbar"
+									data-mcs-theme="minimal-dark">
+									
+									<li class="subtotal">
+										<div class="overflow-h margin-bottom-10">
+											<span>Subtotal</span>
+										
+											<span class="pull-right subtotal-cost">0</span>
+											
+										</div>
+										<div class="row">
+											<div class="col-xs-6">
+												<a href="./list-cart.html"class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View
+													Cart</a>
+											</div>
+											<div class="col-xs-6">
+												<a href="#" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- End Shopping Cart -->
+	
+						<!-- Nav Menu -->
+						<ul  class="nav navbar-nav">
+							<!-- Pages -->
+							<li class="dropdown active">
+								<a href="./index.html" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+									Home
+								</a>
+							</li>
+							<li class="dropdown">
+								<a href="./product-list.html" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+									Food Menu
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Fastfood</a></li>
+									<li><a href="#">Drinks</a></li>
+									<li><a href="#">Seafood</a></li>
+									<li><a href="#">Thai food</a></li>
+									<li><a href="#">Korean food</a></li>
+									<li><a href="#">Japanese food</a></li>
+								</ul>  
+							</li>
+							<li class="dropdown mega-menu-fullwidth">
+								<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+									Promotions
+								</a>
+								
+							</li>
+							<li class="dropdown mega-menu-fullwidth">
+								<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+									Contact & Help
+								</a>
+							</li>
+						</ul>
+						<!-- End Nav Menu -->                    
+					</div>
+				</div>    
+			</div>   
+			<!-- End Navbar -->
+		</div>
+		<!--=== End Header v5 ===-->
+
+		<!--=== Slider ===-->
+		<div class="tp-banner-container" >
+			<div class="tp-banner">
+				<ul >
+					<!-- SLIDE -->
+					<li  class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 1">
+						<!-- MAIN IMAGE -->
+						 <img src="./img/1.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="center"
+						data-bgrepeat="no-repeat" >
+
+						<div class="tp-caption revolution-ch1 sft start" data-x="center"
+							data-hoffset="0" data-y="100" data-speed="1500" data-start="500"
+							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
+							data-endspeed="300">
+							
+						</div> <!-- LAYER -->
+						<div class="tp-caption sft" data-x="center" data-hoffset="0"
+							data-y="380" data-speed="1600" data-start="1800"
+							data-easing="Power4.easeOut" data-endspeed="300"
+							data-endeasing="Power1.easeIn" data-captionhidden="off"
+							style="z-index: 6">
+							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Order
+								Now</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
+						<!-- MAIN IMAGE --> <img src="./img/5.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="center"
+						data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch3 sft start" data-x="center"
+							data-hoffset="0" data-y="140" data-speed="1500" data-start="500"
+							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
+							data-endspeed="300">
+						</div> <!-- LAYER -->
+						<div class="tp-caption sft" data-x="center" data-hoffset="0"
+							data-y="380" data-speed="1600" data-start="1800"
+							data-easing="Power4.easeOut" data-endspeed="300"
+							data-endeasing="Power1.easeIn" data-captionhidden="off"
+							style="z-index: 6">
+							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Order
+								Now</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
+						<!-- MAIN IMAGE --> <img src="./img/3.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="right top"
+						data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch3 sft start" data-x="right"
+							data-hoffset="5" data-y="130" data-speed="1500" data-start="500"
+							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
+							data-endspeed="300">
+							
+						</div> <!-- LAYER -->
+						<div class="tp-caption sft" data-x="center" data-hoffset="0"
+							data-y="380" data-speed="1600" data-start="1800"
+							data-easing="Power4.easeOut" data-endspeed="300"
+							data-endeasing="Power1.easeIn" data-captionhidden="off"
+							style="z-index: 6">
+							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Order
+								Now</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 4">
+						<!-- MAIN IMAGE --> <img src="./img/2.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="center"
+						data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch1 sft start" data-x="center"
+							data-hoffset="0" data-y="100" data-speed="1500" data-start="500"
+							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
+							data-endspeed="300"></div> <!-- LAYER -->
+							<div class="tp-caption sft" data-x="center" data-hoffset="0"
+							data-y="380" data-speed="1600" data-start="1800"
+							data-easing="Power4.easeOut" data-endspeed="300"
+							data-endeasing="Power1.easeIn" data-captionhidden="off"
+							style="z-index: 6">
+							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Order
+								Now</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 5">
+						<!-- MAIN IMAGE --> <img src="./img/4.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="right top"
+						data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch5 sft start" data-x="right"
+							data-hoffset="5" data-y="130" data-speed="1500" data-start="500"
+							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
+							data-endspeed="300">
+						</div> <!-- LAYER -->
+						<div class="tp-caption sft" data-x="center" data-hoffset="0"
+							data-y="380" data-speed="1600" data-start="1800"
+							data-easing="Power4.easeOut" data-endspeed="300"
+							data-endeasing="Power1.easeIn" data-captionhidden="off"
+							style="z-index: 6">
+							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Order
+								Now</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+				</ul>
+				<div class="tp-bannertimer tp-bottom"></div>
+			</div>
+		</div>
+		<!--=== End Slider ===-->
+
+		<!--=== Product Content ===-->
+		<div class="container content-md">
+			<!--=== Illustration v1 ===-->
+			<div class="heading heading-v1 margin-bottom-20">
+				<h2 style="color: red;">Best seller</h2>
+			</div>
+			<div class="row margin-bottom-60">
+				<div class="col-md-6 md-margin-bottom-30">
+					<div class="overflow-h">
+						<div class="illustration-v1 illustration-img1">
+							<div class="illustration-bg">
+								<div class="illustration-ads ad-details-v1">
+									<h3>
+										<strong>SALE</strong> 10%  <strong>off</strong>
+									</h3>
+									<a class="btn-u btn-brd btn-brd-hover btn-u-light" href="#">Order
+										Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="overflow-h">
+						<a class="illustration-v1 illustration-img2" href="#"> <span
+							class="illustration-bg"> <span
+								class="illustration-ads ad-details-v2"> <span
+									class="item-time">Mi Quang - Da Nang</span> <span class="item-name">Best</span>
+							</span>
+						</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--/end row-->
+			<!--=== End Illustration v1 ===-->
+
+			<div class="heading heading-v1 margin-bottom-20">
+				<h2>Featured food</h2>
+			</div>
+
+			<!--=== Illustration v2 ===-->
+			<div class="illustration-v2 margin-bottom-60">
+				<div class="customNavigation margin-bottom-25">
+					<a class="owl-btn prev rounded-x"><i class="fa fa-angle-left"></i></a>
+					<a class="owl-btn next rounded-x"><i class="fa fa-angle-right"></i></a>
+				</div>
+
+				<ul class="list-inline owl-slider">
+
+						<li class="item">
+							<div class="product-img">
+								<a
+									href="#"><img
+									width="265" height="314" src="./img/blog/06.jpg" alt=""></a> <a
+									class="product-review"
+									href="#">Quick
+									review</a> <a class="add-to-cart"
+									href="#"><i
+									class="fa fa-shopping-cart"></i>Add to cart</a>
+								
+							</div>
+							<div class="product-description product-description-brd">
+								<div class="overflow-h margin-bottom-5">
+									<div class="pull-left">Banh Canh</a>
+										</h4>
+										<span class="gender text-uppercase">Banh Canh Ca Nuc</span>
+										<span class="gender">best selling</span>
+									</div>
+									<div class="product-price">
+										<span class="title-price">1.41$</span>
+
+									</div>
+								</div>
+								<ul class="list-inline product-ratings">
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li class="like-icon"><a
+										data-original-title="Add to wishlist" data-toggle="tooltip"
+										data-placement="left" class="tooltips" href="#"><i
+											class="fa fa-heart"></i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item">
+							<div class="product-img">
+								<a
+									href="#"><img
+									width="265" height="314" src="./img/blog/05.jpg" alt=""></a> <a
+									class="product-review"
+									href="#">Quick
+									review</a> <a class="add-to-cart"
+									href="#"><i
+									class="fa fa-shopping-cart"></i>Add to cart</a>
+								
+							</div>
+							<div class="product-description product-description-brd">
+								<div class="overflow-h margin-bottom-5">
+									<div class="pull-left">Tom thai sot thai</a>
+										</h4>
+										<span class="gender text-uppercase">Tom thai sot thai</span>
+										<span class="gender">best selling</span>
+									</div>
+									<div class="product-price">
+										<span class="title-price">3.62$</span>
+
+									</div>
+								</div>
+								<ul class="list-inline product-ratings">
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li class="like-icon"><a
+										data-original-title="Add to wishlist" data-toggle="tooltip"
+										data-placement="left" class="tooltips" href="#"><i
+											class="fa fa-heart"></i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item">
+							<div class="product-img">
+								<a
+									href="#"><img
+									width="265" height="314" src="./img/blog/09.jpg" alt=""></a> <a
+									class="product-review"
+									href="#">Quick
+									review</a> <a class="add-to-cart"
+									href="#"><i
+									class="fa fa-shopping-cart"></i>Add to cart</a>
+								
+							</div>
+							<div class="product-description product-description-brd">
+								<div class="overflow-h margin-bottom-5">
+									<div class="pull-left">Com ga</a>
+										</h4>
+										<span class="gender text-uppercase">Com ga</span>
+										<span class="gender">best selling</span>
+									</div>
+									<div class="product-price">
+										<span class="title-price">1.28$</span>
+
+									</div>
+								</div>
+								<ul class="list-inline product-ratings">
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li class="like-icon"><a
+										data-original-title="Add to wishlist" data-toggle="tooltip"
+										data-placement="left" class="tooltips" href="#"><i
+											class="fa fa-heart"></i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item">
+							<div class="product-img">
+								<a
+									href="#"><img
+									width="265" height="314" src="./img/blog/10.jpg" alt=""></a> <a
+									class="product-review"
+									href="#">Quick
+									review</a> <a class="add-to-cart"
+									href="#"><i
+									class="fa fa-shopping-cart"></i>Add to cart</a>
+								
+							</div>
+							<div class="product-description product-description-brd">
+								<div class="overflow-h margin-bottom-5">
+									<div class="pull-left">Sushi</a>
+										</h4>
+										<span class="gender text-uppercase">Sushi</span>
+										<span class="gender">best selling</span>
+									</div>
+									<div class="product-price">
+										<span class="title-price">12.73$</span>
+
+									</div>
+								</div>
+								<ul class="list-inline product-ratings">
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li class="like-icon"><a
+										data-original-title="Add to wishlist" data-toggle="tooltip"
+										data-placement="left" class="tooltips" href="#"><i
+											class="fa fa-heart"></i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item">
+							<div class="product-img">
+								<a
+									href="#"><img
+									width="265" height="314" src="./img/blog/11.jpg" alt=""></a> <a
+									class="product-review"
+									href="#">Quick
+									review</a> <a class="add-to-cart"
+									href="#"><i
+									class="fa fa-shopping-cart"></i>Add to cart</a>
+								
+							</div>
+							<div class="product-description product-description-brd">
+								<div class="overflow-h margin-bottom-5">
+									<div class="pull-left">Fruit tea</a>
+										</h4>
+										<span class="gender text-uppercase">Fruit tea</span>
+										<span class="gender">best selling</span>
+									</div>
+									<div class="product-price">
+										<span class="title-price">1.06$</span>
+
+									</div>
+								</div>
+								<ul class="list-inline product-ratings">
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li class="like-icon"><a
+										data-original-title="Add to wishlist" data-toggle="tooltip"
+										data-placement="left" class="tooltips" href="#"><i
+											class="fa fa-heart"></i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item">
+							<div class="product-img">
+								<a
+									href="#"><img
+									width="265" height="314" src="./img/blog/12.jpg" alt=""></a> <a
+									class="product-review"
+									href="#">Quick
+									review</a> <a class="add-to-cart"
+									href="#"><i
+									class="fa fa-shopping-cart"></i>Add to cart</a>
+								
+							</div>
+							<div class="product-description product-description-brd">
+								<div class="overflow-h margin-bottom-5">
+									<div class="pull-left">Lau chay</a>
+										</h4>
+										<span class="gender text-uppercase">Lau chay</span>
+										<span class="gender">best selling</span>
+									</div>
+									<div class="product-price">
+										<span class="title-price">10.65$</span>
+
+									</div>
+								</div>
+								<ul class="list-inline product-ratings">
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li class="like-icon"><a
+										data-original-title="Add to wishlist" data-toggle="tooltip"
+										data-placement="left" class="tooltips" href="#"><i
+											class="fa fa-heart"></i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item">
+							<div class="product-img">
+								<a
+									href="#"><img
+									width="265" height="314" src="./img/blog/13.jpg" alt=""></a> <a
+									class="product-review"
+									href="#">Quick
+									review</a> <a class="add-to-cart"
+									href="#"><i
+									class="fa fa-shopping-cart"></i>Add to cart</a>
+								
+							</div>
+							<div class="product-description product-description-brd">
+								<div class="overflow-h margin-bottom-5">
+									<div class="pull-left">Ga nuong lu</a>
+										</h4>
+										<span class="gender text-uppercase">Ga nuong lu</span>
+										<span class="gender">best selling</span>
+									</div>
+									<div class="product-price">
+										<span class="title-price">5.11$</span>
+
+									</div>
+								</div>
+								<ul class="list-inline product-ratings">
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating-selected fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li><i class="rating fa fa-star"></i></li>
+									<li class="like-icon"><a
+										data-original-title="Add to wishlist" data-toggle="tooltip"
+										data-placement="left" class="tooltips" href="#"><i
+											class="fa fa-heart"></i></a></li>
+								</ul>
+							</div>
+						</li>
+					<!-- </c:forEach> -->
+				</ul>
+
+			</div>
+
+			<div class="heading heading-v1 margin-bottom-40">
+				<h2>Latest products</h2>
+			</div>
+
+			<!--=== Illustration v2 ===-->
+			<div class="row illustration-v2">
+
+					<div class="col-md-3 col-sm-6 md-margin-bottom-30">
+						<div class="product-img">
+							<a
+								href="#"><img
+								width="265" height="314" src="./img/blog/16.jpg" alt=""
+								
+							alt=""></a> <a class="product-review"
+								href="#">Quick
+								review</a> <a class="add-to-cart"
+								href="#"><i
+								class="fa fa-shopping-cart"></i>Add to cart</a>
+						</div>
+						<div class="product-description product-description-brd">
+							<div class="overflow-h margin-bottom-5">
+								<div class="pull-left">
+									<h4 class="title-price">
+										<a href="#">Tra dao</a>
+
+									</h4>
+									<span class="gender text-uppercase">Tra dao</span>
+									<span class="gender"></span>
+
+								</div>
+								<div class="product-price">
+									<span class="title-price">1.03$</span>
+								</div>
+							</div>
+							<ul class="list-inline product-ratings">
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li class="like-icon"><a
+									data-original-title="Add to wishlist" data-toggle="tooltip"
+									data-placement="left" class="tooltips" href="#"><i
+										class="fa fa-heart"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 md-margin-bottom-30">
+						<div class="product-img">
+							<a
+								href="#"><img
+								width="265" height="314" src="./img/blog/17.jpg" alt=""
+								
+							alt=""></a> <a class="product-review"
+								href="#">Quick
+								review</a> <a class="add-to-cart"
+								href="#"><i
+								class="fa fa-shopping-cart"></i>Add to cart</a>
+						</div>
+						<div class="product-description product-description-brd">
+							<div class="overflow-h margin-bottom-5">
+								<div class="pull-left">
+									<h4 class="title-price">
+										<a
+											href="#">Matcha dam pudding</a>
+
+									</h4>
+									<span class="gender text-uppercase">Matcha dam pudding</span>
+									<span class="gender"></span>
+
+								</div>
+								<div class="product-price">
+									<span class="title-price">1.92$</span>
+								</div>
+							</div>
+							<ul class="list-inline product-ratings">
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li class="like-icon"><a
+									data-original-title="Add to wishlist" data-toggle="tooltip"
+									data-placement="left" class="tooltips" href="#"><i
+										class="fa fa-heart"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 md-margin-bottom-30">
+						<div class="product-img">
+							<a
+								href="#"><img
+								width="265" height="314" src="./img/blog/14.jpg" alt=""
+								
+							alt=""></a> <a class="product-review"
+								href="#">Quick
+								review</a> <a class="add-to-cart"
+								href="#"><i
+								class="fa fa-shopping-cart"></i>Add to cart</a>
+						</div>
+						<div class="product-description product-description-brd">
+							<div class="overflow-h margin-bottom-5">
+								<div class="pull-left">
+									<h4 class="title-price">
+										<a
+											href="#">Che thai</a>
+
+									</h4>
+									<span class="gender text-uppercase">Che thai</span>
+									<span class="gender"></span>
+
+								</div>
+								<div class="product-price">
+									<span class="title-price">1.06$</span>
+								</div>
+							</div>
+							<ul class="list-inline product-ratings">
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li class="like-icon"><a
+									data-original-title="Add to wishlist" data-toggle="tooltip"
+									data-placement="left" class="tooltips" href="#"><i
+										class="fa fa-heart"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 md-margin-bottom-30">
+						<div class="product-img">
+							<a
+								href="#"><img
+								width="265" height="314" src="./img/blog/15.jpg" alt=""
+								
+							alt=""></a> <a class="product-review"
+								href="#">Quick
+								review</a> <a class="add-to-cart"
+								href="#"><i
+								class="fa fa-shopping-cart"></i>Add to cart</a>
+						</div>
+						<div class="product-description product-description-brd">
+							<div class="overflow-h margin-bottom-5">
+								<div class="pull-left">
+									<h4 class="title-price">
+										<a
+											href="#">Sua chua tran chau</a>
+
+									</h4>
+									<span class="gender text-uppercase">Sua chua tran chau</span>
+									<span class="gender"></span>
+
+								</div>
+								<div class="product-price">
+									<span class="title-price">1.28$</span>
+								</div>
+							</div>
+							<ul class="list-inline product-ratings">
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating-selected fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li><i class="rating fa fa-star"></i></li>
+								<li class="like-icon"><a
+									data-original-title="Add to wishlist" data-toggle="tooltip"
+									data-placement="left" class="tooltips" href="#"><i
+										class="fa fa-heart"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				<!-- </c:forEach> -->
+
+
+			</div>
+			<!--=== End Illustration v2 ===-->
+		</div>
+		<!--=== End Product Content ===-->
+
+		<!--=== Twitter-Block ===-->
+		<div class="parallaxBg twitter-block margin-bottom-60">
+			<div class="container">
+				<div class="heading heading-v1 margin-bottom-20">
+					<h2>Feedback</h2>
+				</div>
+
+				<div id="carousel-example-generic-v5" class="carousel slide"
+					data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li class="active rounded-x"
+							data-target="#carousel-example-generic-v5" data-slide-to="0"></li>
+						<li class="rounded-x" data-target="#carousel-example-generic-v5"
+							data-slide-to="1"></li>
+						<li class="rounded-x" data-target="#carousel-example-generic-v5"
+							data-slide-to="2"></li>
+					</ol>
+
+					<div class="carousel-inner">
+						<div class="item active">
+							<p>The food is very good, next time I will invite you to continue to use your service.</p>
+							
+							<ul class="list-inline twitter-icons">
+								<li><a href="#"><i class="fa fa-reply"></i></a></li>
+								<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+								<li><a href="#"><i class="fa fa-star"></i></a></li>
+							</ul>
+						</div>
+						<div class="item">
+							<p>The food is clean, the delivery is very fast, it only takes 20 minutes to have the food delivered to my house.</p>
+							<ul class="list-inline twitter-icons">
+								<li><a href="#"><i class="fa fa-reply"></i></a></li>
+								<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+								<li><a href="#"><i class="fa fa-star"></i></a></li>
+							</ul>
+						</div>
+						<div class="item">
+							<p>The food is to my taste, the shop is very careful about the packaging process.</p>
+							<ul class="list-inline twitter-icons">
+								<li><a href="#"><i class="fa fa-reply"></i></a></li>
+								<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+								<li><a href="#"><i class="fa fa-star"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="carousel-arrow">
+						<a class="left carousel-control"
+							href="#carousel-example-generic-v5" data-slide="prev"> <i
+							class="fa fa-angle-left"></i>
+						</a> <a class="right carousel-control"
+							href="#carousel-example-generic-v5" data-slide="next"> <i
+							class="fa fa-angle-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--=== End Twitter-Block ===-->
+
+		<div class="container">
+			
+
+			<!--=== Illustration v4 ===-->
+			<div class="row illustration-v4 margin-bottom-40">
+				<div class="col-md-4">
+					<div class="heading heading-v1 margin-bottom-20">
+						<h2>Thai food</h2>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/06.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Goi du du Thai Lan</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<!-- <li class="thumb-product-price line-through">$3.41</li> -->
+							<li class="thumb-product-price">$3.41</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/07.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Xoi xoai</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<li class="thumb-product-price">$2.56</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/01.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Bach tuoc sot thai</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<li class="thumb-product-price">$3.19</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="heading heading-v1 margin-bottom-20">
+						<h2>Breakfast</h2>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/04.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Bo ne 3 ngon</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<li class="thumb-product-price">$1.06</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/02.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Bo kho</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<li class="thumb-product-price">$1.49</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/05.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Pho bo Ha Noi</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<!-- <li class="thumb-product-price line-through">$75.00</li> -->
+							<li class="thumb-product-price">$1.28</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 padding">
+					<div class="heading heading-v1 margin-bottom-20">
+						<h2>Korean Food</h2>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/09.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Lau Tokbokki</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<!-- <li class="thumb-product-price line-through">$5.11</li> -->
+							<li class="thumb-product-price">$5.11</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/08.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Com tron Han Quoc</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<li class="thumb-product-price">$1.92</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="./img/thumb/10.jpg"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="shop-ui-inner.html">Com cuon</a>
+							</h4>
+							<span class="thumb-product-type"></span>
+						</div>
+						<ul class="list-inline overflow-h">
+							<li class="thumb-product-price">$1.06</li>
+							<li class="thumb-product-purchase"><a href="#"><i
+									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
+									class="fa fa-heart"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--/end row-->
+			<!--=== End Illustration v4 ===-->
+		</div>
+		<!--/end cotnainer-->
+
+		<!--=== Collection Banner ===-->
+		<div class="collection-banner">
+			
+		</div>
+		<!--=== End Collection Banner ===-->
+
+		<!--=== Sponsors ===-->
+		<div class="container content">
+		
+		</div>
+		<!--=== End Shop Suvbscribe ===-->
+
+		<!--=== Footer v4 ===-->
+		<div class="footer-v4">
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						
+							
+							<div class="col-md-6">
+								<ul class="list-unstyled address-list margin-bottom-20">
+									<li><i class="fa fa-angle-right"></i>Da Nang - Viet Nam</li>
+									<li><i class="fa fa-angle-right"></i>Phone: 0973.124.642</li>
+									<li><i class="fa fa-angle-right"></i>Email:happyrestaurant@gmail.com</li>
+								</ul>
+							</div>
+		
+							<div class="col-md-6">
+								<ul class="list-inline shop-social">
+									<li ><a href="#"><i style="font-size: 30px;" class="fb rounded-md fa fa-facebook"></i></a></li>
+									<li><a href="#"><i style="font-size: 30px;" class="tw rounded-md fa fa-twitter"></i></a></li>
+									<li><a href="#"><i style="font-size: 30px;" class="gp rounded-md fa fa-google-plus"></i></a></li>
+									<li><a href="#"><i style="font-size: 30px;" class="yt rounded-md fa fa-youtube"></i></a></li>
+								</ul>
+							</div>
+						
+					</div>
+					<!--/end row-->
+				</div>
+				<!--/end continer-->
+			</div>
+			<!--/footer-->
+		
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								2023 &copy; Development by lienntb
+							</p>
+						</div>
+						<div class="col-md-6">
+							<ul class="list-inline sponsors-icons pull-right">
+								<li><i class="fa fa-cc-paypal"></i></li>
+								<li><i class="fa fa-cc-visa"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/copyright-->
+		</div>
+		<!--=== End Footer v4 ===-->
+	</div>
+	<!--/wrapper-->
+
+	<!-- JS Global Compulsory -->
+	<script src="./plugins/jquery/jquery.min.js"></script>
+	<script src="./plugins/jquery/jquery-migrate.min.js"></script>
+	<script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JS Implementing Plugins -->
+	<script src="./plugins/back-to-top.js"></script>
+	<script src="./plugins/smoothScroll.js"></script>
+	<script src="./plugins/jquery.parallax.js"></script>
+	<script src="./plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+	<script
+		src="./plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script
+		src="./plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script
+		src="./plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- JS Customization -->
+	<script src="./js/custom.js"></script>
+	<!-- JS Page Level -->
+	<script src="./js/shop.app.js"></script>
+	<script src="./js/plugins/owl-carousel.js"></script>
+	<script src="./js/plugins/revolution-slider.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			// App.init();
+			App.initScrollBar();
+			App.initParallaxBg();
+			OwlCarousel.initOwlCarousel();
+			RevolutionSlider.initRSfullWidth();
+		});
+	</script>
+
+</body>
+</body>
+</html>
