@@ -120,12 +120,12 @@
 ------------------------------------*/ 
 .breadcrumbs-v4 {
   width: 100%;
-  padding: 25px 0;
+  padding: 35px 0;
   position: relative;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(../img/breadcrumbs-img.jpg);
+  background-image: url(../img/logo.png);
 }
 
 .breadcrumbs-v4:before {
@@ -135,7 +135,7 @@
   height: 100%;
   content: " ";
   position: absolute;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .breadcrumbs-v4 .container {
@@ -143,10 +143,10 @@
 }
 
 .breadcrumbs-v4 span.page-name {
-  color: #fff;
+  color: #333;
   display: block;
-  font-size: 18px;
-  font-weight: 200;
+  font-size: 30px;
+  font-weight: 400;
   margin: 0 0 5px 3px;
 }
 
@@ -166,13 +166,13 @@
 }
 
 .breadcrumbs-v4 .breadcrumb-v4-in > li {
-  color: #fff;
-  font-size: 13px;
+  color: #333;
+  font-size: 18px;
   display: inline-block;
 }
 
 .breadcrumbs-v4 .breadcrumb-v4-in > li + li:before {
-  color: #fff;
+  color: #333;
   content: "\f105";
   margin-left: 7px;
   padding-right: 8px;
@@ -180,12 +180,12 @@
 }
 
 .breadcrumbs-v4 .breadcrumb-v4-in li a {
-  color: #fff;
+  color: #333;
 }
 
 .breadcrumbs-v4 .breadcrumb-v4-in li.active,
 .breadcrumbs-v4 .breadcrumb-v4-in li a:hover {
-  color: #18ba9b;
+  color: var( --line-color);
   text-decoration: none;
 }
 
@@ -195,7 +195,7 @@
   }
 
   .breadcrumbs-v4 span.page-name {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   .breadcrumbs-v4 h1 {

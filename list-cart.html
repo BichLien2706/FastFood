@@ -2,10 +2,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add to Cart</title>
+<title>Shopping cart</title>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico">
-<c:url value="/view/client/static" var="url"></c:url>
+<link rel="icon" href="./img/happyrestauren.png" type="image/x-icon" />
+
 
 <!-- Web Fonts -->
 <link rel='stylesheet' type='text/css'
@@ -42,7 +43,7 @@
 </head>
 <body>
 	<!-- Subiz -->
-	<script>
+	<!-- <script>
 		(function(s, u, b, i, z) {
 			u[i] = u[i] || function() {
 				u[i].t = +new Date();
@@ -57,7 +58,7 @@
 		})(document, window, 'https://widgetv4.subiz.com/static/js/app.js',
 				'subiz');
 		subiz('setAccount', 'acqetkhujxyunuatbxzw');
-	</script>
+	</script> -->
 	<!-- End Subiz -->
 <body class="header-fixed">
 	<div class="wrapper">
@@ -162,12 +163,13 @@
 						<ul  class="nav navbar-nav">
 							<!-- Pages -->
 							<li class="dropdown">
-								<a href="./index.html" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+								<a href="./index.html"><!-- class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" -->
 									Home
 								</a>
+								
 							</li>
 							<li class="dropdown">
-								<a href="./product-list.html" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+								<a href="./product-list.html" > <!-- class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" -->
 									Food Menu
 								</a>
 								<ul class="dropdown-menu">
@@ -203,9 +205,6 @@
 		<div class="breadcrumbs-v4">
 			<div class="container">
 				<span class="page-name">Check Out</span>
-				<h1>
-					Maecenas <span class="shop-green">enim</span> sapien
-				</h1>
 				<ul class="breadcrumb-v4-in">
 					<li><a href="./index.html">Home</a></li>
 					<li><a href="">Product</a></li>
@@ -213,6 +212,7 @@
 				</ul>
 			</div>
 			<!--/end container-->
+			
 		</div>
 		<!--=== End Breadcrumbs v4 ===-->
 
@@ -240,7 +240,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach items="${sessionScope.cart}" var="map">
+										<!-- <c:forEach items="${sessionScope.cart}" var="map"> -->
 
 											<tr>
 												<c:url value="/image?fname=${map.value.product.image }"
@@ -260,7 +260,7 @@
 															<span>&times;</span><span class="sr-only">Close</span>
 														</button></a></td>
 											</tr>
-										</c:forEach>
+										<!-- </c:forEach> -->
 
 									</tbody>
 								</table>
@@ -366,83 +366,6 @@
 									<!-- End Accordion -->
 								</div>
 
-								<div class="col-md-6">
-									<h2 class="title-type">Frequently asked questions</h2>
-									<!-- Accordion -->
-									<div class="accordion-v2 plus-toggle">
-										<div class="panel-group" id="accordion-v2">
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" data-parent="#accordion-v2"
-															href="#collapseOne-v2"> What payments methods can I
-															use? </a>
-													</h4>
-												</div>
-												<div id="collapseOne-v2" class="panel-collapse collapse in">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" class="collapsed"
-															data-parent="#accordion-v2" href="#collapseTwo-v2">
-															Can I use gift card to pay for my purchase? </a>
-													</h4>
-												</div>
-												<div id="collapseTwo-v2" class="panel-collapse collapse">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" class="collapsed"
-															data-parent="#accordion-v2" href="#collapseThree-v2">
-															Will I be charged when I place my order? </a>
-													</h4>
-												</div>
-												<div id="collapseThree-v2" class="panel-collapse collapse">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" class="collapsed"
-															data-parent="#accordion-v2" href="#collapseFour-v2">
-															How long will it take to get my order? </a>
-													</h4>
-												</div>
-												<div id="collapseFour-v2" class="panel-collapse collapse">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- End Accordion -->
-								</div>
 							</div>
 						</section>
 
@@ -493,32 +416,6 @@
 			<!--/end container-->
 		</div>
 		<!--=== End Content Medium Part ===-->
-
-		<!--=== Shop Suvbscribe ===-->
-		<div class="shop-subscribe">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 md-margin-bottom-20">
-						<h2>
-							subscribe to our weekly <strong>newsletter</strong>
-						</h2>
-					</div>
-					<div class="col-md-4">
-						<div class="input-group">
-							<input type="text" class="form-control"
-								placeholder="Email your email..."> <span
-								class="input-group-btn">
-								<button class="btn" type="button">
-									<i class="fa fa-envelope-o"></i>
-								</button>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/end container-->
-		</div>
-		<!--=== End Shop Suvbscribe ===-->
 
 		<!--=== Footer v4 ===-->
 		<div class="footer-v4">
