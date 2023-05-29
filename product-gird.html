@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<c:url value="/view/client/static" var="url"></c:url>
 <meta charset="ISO-8859-1">
-<title>Product</title>
+<title>Food Menu</title>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico">
-
+<link rel="icon" href="./img/happyrestauren.png" type="image/x-icon" />
 <!-- Web Fonts -->
 <link rel='stylesheet' type='text/css'
 	href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
@@ -39,6 +38,7 @@
 
 <!-- CSS Customization -->
 <link rel="stylesheet" href="./css/custom.css">
+<link rel="stylesheet" href="./css/fontawesome-free-6.0.0-beta3-web/css/all.min.css">
 </head>
 <body>
 <body class="header-fixed">
@@ -46,11 +46,136 @@
 		<!--=== Header v5 ===-->
 		<div class="header-v5 header-static">
 			<!-- Topbar v3 -->
-			<jsp:include page="topbar.jsp"></jsp:include>
+			<div class="topbar-v3">
+				<div class="search-open">
+					<div class="container">
+						<input type="text" class="form-control" placeholder="Search">
+						<div class="search-close">
+							<i class="icon-close"></i>
+						</div>
+					</div>
+				</div>
+			
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<!-- Topbar Navigation -->
+							<ul class="left-topbar">
+								<li><a>Currency (USD)</a>
+									<ul class="currency">
+										<li class="active"><a href="#">USD 
+											<i class="fa fa-check"></i></a>
+										</li>
+										<li><a href="#">VND</a></li>
+									</ul>
+								</li>
+								<li><a>Language (EN)</a>
+									<ul class="language">
+										<li class="active"><a href="#">English (EN)<i
+												class="fa fa-check"></i></a></li>
+										<li><a href="#">VietNam (VN)</a></li>
+									</ul></li>
+							</ul>
+							
+						</div>
+								<div class="col-sm-6">
+									<ul class="list-inline right-topbar pull-right">
+										<li><a href="./login.html">Login</a>
+											| <a href="./register.html">Register</a></li>
+										<li><i class="search fa fa-search search-button"></i></li>
+									</ul>
+								</div>
+			
+			
+					</div>
+				</div>
 			<!-- End Topbar v3 -->
 
 			<!-- Navbar -->
-			<jsp:include page="navbar.jsp"></jsp:include>
+			<div class="navbar navbar-default mega-menu" role="navigation">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="./">
+							<img style="height: 50px" id="logo-header" src="./img/logo.png" alt="Logo">
+						</a>
+					</div>
+	
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-responsive-collapse">
+						<!-- Shopping Cart -->
+						<ul class="list-inline shop-badge badge-lists badge-icons pull-right">
+							<li><a href="#"><i class="fa fa-shopping-cart"></i></a> 
+							
+								<span class="badge badge-sea rounded-x">0</span>
+						
+								<ul class="list-unstyled badge-open mCustomScrollbar"
+									data-mcs-theme="minimal-dark">
+									
+									<li class="subtotal">
+										<div class="overflow-h margin-bottom-10">
+											<span>Subtotal</span>
+										
+											<span class="pull-right subtotal-cost">0</span>
+											
+										</div>
+										<div class="row">
+											<div class="col-xs-6">
+												<a href=""class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View
+													Cart</a>
+											</div>
+											<div class="col-xs-6">
+												<a href="./list-cart.html" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- End Shopping Cart -->
+	
+						<!-- Nav Menu -->
+						<ul  class="nav navbar-nav">
+							<!-- Pages -->
+							<li class="dropdown">
+								<a href="./index.html">
+									Home
+								</a>
+							</li>
+							<li class="dropdown active">
+								<a href="./product-gird.html"><!-- class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" -->
+									Food Menu
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Fastfood</a></li>
+									<li><a href="#">Drinks</a></li>
+									<li><a href="#">Thai food</a></li>
+									<li><a href="#">Korean food</a></li>
+									<li><a href="#">Japanese food</a></li>
+								</ul>  
+							</li>
+							<li class="dropdown mega-menu-fullwidth">
+								<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+									Promotions
+								</a>
+								
+							</li>
+							<li class="dropdown mega-menu-fullwidth">
+								<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+									Contact & Help
+								</a>
+							</li>
+						</ul>
+						<!-- End Nav Menu -->                    
+					</div>
+				</div>    
+			</div>   
 			<!-- End Navbar -->
 		</div>
 		<!--=== End Header v5 ===-->
@@ -58,14 +183,11 @@
 		<!--=== Breadcrumbs v4 ===-->
 		<div class="breadcrumbs-v4">
 			<div class="container">
-				<span class="page-name">Product Filter Page</span>
-				<h1>
-					Maecenas <span class="shop-green">enim</span> sapien
-				</h1>
+				<span class="page-name">Menu</span>
 				<ul class="breadcrumb-v4-in">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="">Product</a></li>
-					<li class="active">Product Filter Page</li>
+					<li class="active">Menu pages</li>
 				</ul>
 			</div>
 			<!--/end container-->
@@ -76,13 +198,13 @@
 		<div class="content container">
 			<div class="row">
 				<div class="col-md-3 filter-by-block md-margin-bottom-60">
-					<h1>Filter By</h1>
+					<h1>List of dishes</h1>
 					<div class="panel-group" id="accordion">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion"
-										href="#collapseOne"> Brands <i class="fa fa-angle-down"></i>
+										href="#collapseOne"> Food Category <i class="fa fa-angle-down"></i>
 									</a>
 								</h2>
 							</div>
@@ -90,24 +212,27 @@
 								<div class="panel-body">
 									<ul class="list-unstyled checkbox-list">
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Calvin
-												Klein <small><a href="#">(23)</a></small>
+												type="checkbox" name="checkbox" checked /> <i></i> Fastfood <small><a href="#">(9)</a></small>
 										</label></li>
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Gucci <small><a
-													href="#">(4)</a></small>
+												type="checkbox" name="checkbox" checked /> <i></i> Thai food <small><a
+													href="#">(7)</a></small>
 										</label></li>
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Adidas <small><a
+												type="checkbox" name="checkbox" /> <i></i> Korean food <small><a
+													href="#">(8)</a></small>
+										</label></li>
+										<li><label class="checkbox"> <input
+												type="checkbox" name="checkbox" /> <i></i> Japanese food <small><a
 													href="#">(11)</a></small>
 										</label></li>
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Puma <small><a
-													href="#">(3)</a></small>
+											type="checkbox" name="checkbox" /> <i></i> Dessert <small><a
+												href="#">(8)</a></small>
 										</label></li>
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Zara <small><a
-													href="#">(87)</a></small>
+											type="checkbox" name="checkbox" /> <i></i> Vegetarian Food <small><a
+												href="#">(8)</a></small>
 										</label></li>
 									</ul>
 								</div>
@@ -121,7 +246,7 @@
 							<div class="panel-heading">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-v2"
-										href="#collapseTwo"> Categories <i
+										href="#collapseTwo"> Drinks <i
 										class="fa fa-angle-down"></i>
 									</a>
 								</h2>
@@ -130,114 +255,28 @@
 								<div class="panel-body">
 									<ul class="list-unstyled checkbox-list">
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Clothes
-												<small><a href="#">(23)</a></small>
+												type="checkbox" name="checkbox" checked /> <i></i> Coffee
+												<small><a href="#">(6)</a></small>
 										</label></li>
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Glasses
-												<small><a href="#">(4)</a></small>
+												type="checkbox" name="checkbox" checked /> <i></i> Milk Tea
+												<small><a href="#">(10)</a></small>
 										</label></li>
 										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Shoes <small><a
-													href="#">(11)</a></small>
+												type="checkbox" name="checkbox" /> <i></i> Soft Drink <small><a
+													href="#">(7)</a></small>
 										</label></li>
+									</label></li>
+									<li><label class="checkbox"> <input
+											type="checkbox" name="checkbox" /> <i></i> Fruit Juice <small><a
+												href="#">(7)</a></small>
+									</label></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v3">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v3"
-										href="#collapseThree"> Size <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-unstyled checkbox-list">
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> S <small><a
-													href="#">(23)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> M <small><a
-													href="#">(4)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> L <small><a
-													href="#">(11)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> XL <small><a
-													href="#">(3)</a></small>
-										</label></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v4"
-										href="#collapseFour"> Price <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<div class="slider-snap"></div>
-									<p class="slider-snap-text">
-										<span class="slider-snap-value-lower"></span> <span
-											class="slider-snap-value-upper"></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v5">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v5"
-										href="#collapseFive"> Color <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseFive" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-inline product-color-list">
-										<li><a href="#"><img src="./img/colors/01.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="./img/colors/02.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="./img/colors/03.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="./img/colors/04.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="./img/colors/05.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="./img/colors/06.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="./img/colors/07.jpg"
-												alt=""></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/end panel group-->
-
+					
 					<div class="panel-group margin-bottom-30" id="accordion-v6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -273,8 +312,8 @@
 				<div class="col-md-9">
 					<div class="row margin-bottom-5">
 						<div class="col-sm-4 result-category">
-							<h2>Men</h2>
-							<small class="shop-bg-red badge-results">45 Results</small>
+							<h2>Fastfood</h2>
+							<small class="shop-bg-red badge-results">9 Results</small>
 						</div>
 						<div class="col-sm-8">
 							<ul class="list-inline clear-both">
@@ -320,34 +359,26 @@
 					<div class="filter-results">
 						<div class="row illustration-v2 margin-bottom-30">
 						
-						
-						
-						
-						<c:forEach items="${productList }" var="p" >						
-							<c:url value="/image?fname=${p.image }" var="imgUrl"></c:url>
-							
 							<div class="col-md-4">
 								<div class="product-img product-img-brd">
-									<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}"><img class="full-width img-responsive"
-										src="${p.image}" alt=""></a> <a
-										class="product-review" href="${pageContext.request.contextPath }/product/detail?id=${p.id}">Quick
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/01.jpg" alt=""></a> <a
+										class="product-review" href="">Quick
 										review</a> <a class="add-to-cart" href="#"><i
 										class="fa fa-shopping-cart"></i>Add to cart</a>
-									<div class="shop-rgba-dark-green rgba-banner">New</div>
 								</div>
 								<div
 									class="product-description product-description-brd margin-bottom-30">
 									<div class="overflow-h margin-bottom-5">
 										<div class="pull-left">
 											<h4 class="title-price">
-												<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}">Double-breasted</a>
+												<a href="">Chan ga sot thai</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
 										</div>
 										<div class="product-price">
-											<span class="title-price">$ ${p.price }.0</span> <span
-												class="title-price line-through">$ ${p.price *1.25 }</span>
+											<span class="title-price">$ 1.28</span> 
 										</div>
 									</div>
 									<ul class="list-inline product-ratings">
@@ -356,25 +387,185 @@
 										<li><i class="rating-selected fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="product-img product-img-brd">
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/02.jpg" alt=""></a> <a
+										class="product-review" href="">Quick
+										review</a> <a class="add-to-cart" href="#"><i
+										class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<div
+									class="product-description product-description-brd margin-bottom-30">
+									<div class="overflow-h margin-bottom-5">
+										<div class="pull-left">
+											<h4 class="title-price">
+												<a href="">Ga ran</a>
+											</h4>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
+										</div>
+										<div class="product-price">
+											<span class="title-price">$ 1.07</span> 
+										</div>
+									</div>
+									<ul class="list-inline product-ratings">
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="product-img product-img-brd">
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/03.jpeg" alt=""></a> <a
+										class="product-review" href="">Quick
+										review</a> <a class="add-to-cart" href="#"><i
+										class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<div
+									class="product-description product-description-brd margin-bottom-30">
+									<div class="overflow-h margin-bottom-5">
+										<div class="pull-left">
+											<h4 class="title-price">
+												<a href="">Goi cuon</a>
+											</h4>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
+										</div>
+										<div class="product-price">
+											<span class="title-price">$ 1.5</span> 
+										</div>
+									</div>
+									<ul class="list-inline product-ratings">
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
 									</ul>
 								</div>
 							</div>
 							
 							
-							</c:forEach>
-							
-							
+						<div class="row illustration-v2 margin-bottom-30">
+							<div class="col-md-4">
+								<div class="product-img product-img-brd">
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/04.jpeg" alt=""></a> <a
+										class="product-review" href="">Quick
+										review</a> <a class="add-to-cart" href="#"><i
+										class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<div
+									class="product-description product-description-brd margin-bottom-30">
+									<div class="overflow-h margin-bottom-5">
+										<div class="pull-left">
+											<h4 class="title-price">
+												<a href="">Pizza rau cu size M</a>
+											</h4>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
+										</div>
+										<div class="product-price">
+											<span class="title-price">$ 2.28</span> 
+										</div>
+									</div>
+									<ul class="list-inline product-ratings">
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="product-img product-img-brd">
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/05.jpeg" alt=""></a> <a
+										class="product-review" href="">Quick
+										review</a> <a class="add-to-cart" href="#"><i
+										class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<div
+									class="product-description product-description-brd margin-bottom-30">
+									<div class="overflow-h margin-bottom-5">
+										<div class="pull-left">
+											<h4 class="title-price">
+												<a href="">Hamburger bo</a>
+											</h4>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
+										</div>
+										<div class="product-price">
+											<span class="title-price">$ 2.0</span> 
+										</div>
+									</div>
+									<ul class="list-inline product-ratings">
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="product-img product-img-brd">
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/06.jpeg" alt=""></a> <a
+										class="product-review" href="">Quick
+										review</a> <a class="add-to-cart" href="#"><i
+										class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<div
+									class="product-description product-description-brd margin-bottom-30">
+									<div class="overflow-h margin-bottom-5">
+										<div class="pull-left">
+											<h4 class="title-price">
+												<a href="">Nem chua ran</a>
+											</h4>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
+										</div>
+										<div class="product-price">
+											<span class="title-price">$ 1.2</span> 
+										</div>
+									</div>
+									<ul class="list-inline product-ratings">
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating-selected fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li><i class="rating fa fa-star"></i></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 
 						<div class="row illustration-v2 margin-bottom-30">
 							<div class="col-md-4">
 								<div class="product-img product-img-brd">
-									<a href="#"><img class="full-width img-responsive"
-										src="./img/blog/21.jpg" alt=""></a> <a
-										class="product-review" href="shop-ui-inner.html">Quick
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/07.jpeg" alt=""></a> <a
+										class="product-review" href="">Quick
 										review</a> <a class="add-to-cart" href="#"><i
 										class="fa fa-shopping-cart"></i>Add to cart</a>
 								</div>
@@ -383,13 +574,13 @@
 									<div class="overflow-h margin-bottom-5">
 										<div class="pull-left">
 											<h4 class="title-price">
-												<a href="shop-ui-inner.html">Double-breasted</a>
+												<a href="">Vien chien</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
 										</div>
 										<div class="product-price">
-											<span class="title-price">$95.00</span>
+											<span class="title-price">$ 1.28</span> 
 										</div>
 									</div>
 									<ul class="list-inline product-ratings">
@@ -398,18 +589,16 @@
 										<li><i class="rating-selected fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
 									</ul>
 								</div>
 							</div>
+
 							<div class="col-md-4">
 								<div class="product-img product-img-brd">
-									<a href="#"><img class="full-width img-responsive"
-										src="./img/blog/22.jpg" alt=""></a> <a
-										class="product-review" href="shop-ui-inner.html">Quick
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/08.jpg" alt=""></a> <a
+										class="product-review" href="">Quick
 										review</a> <a class="add-to-cart" href="#"><i
 										class="fa fa-shopping-cart"></i>Add to cart</a>
 								</div>
@@ -418,14 +607,13 @@
 									<div class="overflow-h margin-bottom-5">
 										<div class="pull-left">
 											<h4 class="title-price">
-												<a href="shop-ui-inner.html">Double-breasted</a>
+												<a href="">Khoai lang lac pho mai</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
 										</div>
 										<div class="product-price">
-											<span class="title-price">$60.00</span> <span
-												class="title-price line-through">$95.00</span>
+											<span class="title-price">$ 1.17</span> 
 										</div>
 									</div>
 									<ul class="list-inline product-ratings">
@@ -434,33 +622,31 @@
 										<li><i class="rating-selected fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
 									</ul>
 								</div>
 							</div>
+
 							<div class="col-md-4">
 								<div class="product-img product-img-brd">
-									<a href="#"><img class="full-width img-responsive"
-										src="./img/blog/23.jpg" alt=""></a> <a
-										class="product-review" href="shop-ui-inner.html">Quick
+									<a href=""><img class="full-width img-responsive"
+										src="./img/fastfood/09.jpeg" alt=""></a> <a
+										class="product-review" href="">Quick
 										review</a> <a class="add-to-cart" href="#"><i
 										class="fa fa-shopping-cart"></i>Add to cart</a>
-									<div class="shop-rgba-red rgba-banner">Out of stock</div>
 								</div>
-								<div class="product-description product-description-brd">
+								<div
+									class="product-description product-description-brd margin-bottom-30">
 									<div class="overflow-h margin-bottom-5">
 										<div class="pull-left">
 											<h4 class="title-price">
-												<a href="shop-ui-inner.html">Double-breasted</a>
+												<a href="">Banh mi nuong muoi ot</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="gender text-uppercase">Fastfood</span> <span
+												class="gender">Fastfood</span>
 										</div>
 										<div class="product-price">
-											<span class="title-price">$95.00</span>
+											<span class="title-price">$ 0.7</span> 
 										</div>
 									</div>
 									<ul class="list-inline product-ratings">
@@ -469,125 +655,12 @@
 										<li><i class="rating-selected fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
+										<li class="like-icon"><i class="fa-solid fa-heart"></i></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 
-						<div class="row illustration-v2">
-							<div class="col-md-4">
-								<div class="product-img product-img-brd">
-									<a href="#"><img class="full-width img-responsive"
-										src="./img/blog/16.jpg" alt=""></a> <a
-										class="product-review" href="shop-ui-inner.html">Quick
-										review</a> <a class="add-to-cart" href="#"><i
-										class="fa fa-shopping-cart"></i>Add to cart</a>
-									<div class="shop-rgba-dark-green rgba-banner">New</div>
-								</div>
-								<div
-									class="product-description product-description-brd margin-bottom-30">
-									<div class="overflow-h margin-bottom-5">
-										<div class="pull-left">
-											<h4 class="title-price">
-												<a href="shop-ui-inner.html">Double-breasted</a>
-											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
-										</div>
-										<div class="product-price">
-											<span class="title-price">$60.00</span> <span
-												class="title-price line-through">$95.00</span>
-										</div>
-									</div>
-									<ul class="list-inline product-ratings">
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating fa fa-star"></i></li>
-										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="product-img product-img-brd">
-									<a href="#"><img class="full-width img-responsive"
-										src="./img/blog/17.jpg" alt=""></a> <a
-										class="product-review" href="shop-ui-inner.html">Quick
-										review</a> <a class="add-to-cart" href="#"><i
-										class="fa fa-shopping-cart"></i>Add to cart</a>
-								</div>
-								<div
-									class="product-description product-description-brd margin-bottom-30">
-									<div class="overflow-h margin-bottom-5">
-										<div class="pull-left">
-											<h4 class="title-price">
-												<a href="shop-ui-inner.html">Double-breasted</a>
-											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
-										</div>
-										<div class="product-price">
-											<span class="title-price">$60.00</span> <span
-												class="title-price line-through">$95.00</span>
-										</div>
-									</div>
-									<ul class="list-inline product-ratings">
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating fa fa-star"></i></li>
-										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="product-img product-img-brd">
-									<a href="#"><img class="full-width img-responsive"
-										src="./img/blog/18.jpg" alt=""></a> <a
-										class="product-review" href="shop-ui-inner.html">Quick
-										review</a> <a class="add-to-cart" href="#"><i
-										class="fa fa-shopping-cart"></i>Add to cart</a>
-								</div>
-								<div
-									class="product-description product-description-brd margin-bottom-30">
-									<div class="overflow-h margin-bottom-5">
-										<div class="pull-left">
-											<h4 class="title-price">
-												<a href="shop-ui-inner.html">Double-breasted</a>
-											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
-										</div>
-										<div class="product-price">
-											<span class="title-price">$95.00</span>
-										</div>
-									</div>
-									<ul class="list-inline product-ratings">
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating-selected fa fa-star"></i></li>
-										<li><i class="rating fa fa-star"></i></li>
-										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
 					</div>
 					<!--/end filter resilts-->
 
@@ -606,37 +679,54 @@
 			<!--/end row-->
 		</div>
 		<!--/end container-->
-		<!--=== End Content Part ===-->
-
-		<!--=== Shop Suvbscribe ===-->
-		<div class="shop-subscribe">
+	</div>
+	<!--=== Footer v4 ===-->
+	<div class="footer-v4 col-12">
+		<div class="footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 md-margin-bottom-20">
-						<h2>
-							subscribe to our weekly <strong>newsletter</strong>
-						</h2>
-					</div>
-					<div class="col-md-4">
-						<div class="input-group">
-							<input type="text" class="form-control"
-								placeholder="Email your email..."> <span
-								class="input-group-btn">
-								<button class="btn" type="button">
-									<i class="fa fa-envelope-o"></i>
-								</button>
-							</span>
+						
+						<div class="col-md-6">
+							<ul class="list-unstyled address-list margin-bottom-20">
+								<li><i class="fa fa-angle-right"></i>Da Nang - Viet Nam</li>
+								<li><i class="fa fa-angle-right"></i>Phone: 0973.124.642</li>
+								<li><i class="fa fa-angle-right"></i>Email:happyrestaurant@gmail.com</li>
+							</ul>
 						</div>
+	
+						<div class="col-md-6">
+							<ul class="list-inline shop-social">
+								<li ><a href="#"><i style="font-size: 30px;" class="fa-brands fa-facebook-f"></i></a></li>
+								<li><a href="#"><i style="font-size: 30px;" class="fa-brands fa-twitter"></i></a></li>
+								<li><a href="#"><i style="font-size: 30px;" class="fa-brands fa-google"></i></a></li>
+								<li><a href="#"><i  style="font-size: 30px;" class="fa-brands fa-youtube"></i></i></a></li>
+							</ul>
+						</div>
+					
+				</div>
+				<!--/end row-->
+			</div>
+			<!--/end continer-->
+		</div>
+		<!--/footer-->
+	
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>
+							2023 &copy; Development by lienntb
+						</p>
+					</div>
+					<div class="col-md-6">
+						<ul class="list-inline sponsors-icons pull-right">
+							<li><i class="fa-brands fa-cc-paypal"></i></li>
+							<li><i class="fa-brands fa-cc-visa"></i></li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			<!--/end container-->
 		</div>
-		<!--=== End Shop Suvbscribe ===-->
-
-		<!--=== Footer v4 ===-->
-		<jsp:include page="footer.jsp"></jsp:include>
-		<!--=== End Footer v4 ===-->
 	</div>
 	<!--/wrapper-->
 
@@ -657,19 +747,25 @@
 	<script src="./js/plugins/mouse-wheel.js"></script>
 	<script>
 		jQuery(document).ready(function() {
-			App.init();
+			// App.init();
 			App.initScrollBar();
 			MouseWheel.initMouseWheel();
 		});
+		const heartLights = document.querySelectorAll('.like-icon i')
+		const iconHearts = document.querySelectorAll('.thumb-product-purchase .icon-heart')
+		
+		heartLights.forEach((heartLight)=>{
+				heartLight.onclick = ()=>{
+					heartLight.classList.toggle('heart-light')
+				}
+		})
+		iconHearts.forEach((iconHeart)=>{
+			iconHeart.onclick = ()=>{
+				iconHeart.classList.toggle('heart-light')
+				}
+		})
 	</script>
-	<!--[if lt IE 9]>
-    <script src="./plugins/respond.js"></script>
-    <script src="./plugins/html5shiv.js"></script>
-    <script src="./js/plugins/placeholder-IE-fixes.js"></script>    
-<![endif]-->
-	<!--[if lt IE 10]>
-    <script src="./plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
-<![endif]-->
+	
 
 </body>
 
