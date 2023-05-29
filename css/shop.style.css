@@ -636,7 +636,7 @@ li:first-child {
 }
 
 .twitter-block .item a {
-	color: #18ba9b;
+	color: var(--line-color);
 }
 
 .twitter-block .twitter-icons i {
