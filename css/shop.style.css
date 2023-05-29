@@ -19,6 +19,7 @@
 }
 :root{
     --bg-color:  #cce6ff;
+    --line-color: #4dd2ff;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #687074;
@@ -292,8 +293,10 @@ li:first-child {
 	padding-bottom: 5px;
 }
 
+
 .illustration-v2 .product-img {
 	position: relative;
+	
 }
 
 .illustration-v2 .product-img-brd {
@@ -455,38 +458,37 @@ li:first-child {
 }
 
 .product-ratings li .rating {
-	color: #8bdccd;
+	color: var(--bg-color);
 	font-size: 14px;
 }
 
 .product-ratings li .rating-selected {
-	color: #18ba9b;
+	color: var(--line-color);
 	font-size: 14px;
 }
 
 /*Like Icon*/
-.product-ratings li.like-icon  {
+.product-ratings li.like-icon {
 	float: right;
+	cursor: pointer;
 }
-
-.product-ratings li.like-icon a {
-	color: #8bdccd;
+.product-ratings li.like-icon .heart-light{
+	color: red;
 }
-
 .product-ratings li.like-icon .tooltip {
 	font-size: 12px;
 	font-weight: 400;
 	text-transform: uppercase;
 }
 
-.product-ratings li.like-icon a:hover {
-	color: #18ba9b;
+.product-ratings li.like-icon:hover {
+	color: red;
 	text-decoration: none;
 }
 
 /*Reply*/
 .product-ratings li.reply a {
-	color: #18ba9b;
+	/* color: #18ba9b; */
 }
 
 /*Illustration v3
@@ -807,6 +809,7 @@ li:first-child {
 	.collection-banner .percent-off span.discount-off {
 		font-size: 30px;
 	}
+	
 }
 
 /*New Offers*/
@@ -912,36 +915,50 @@ li:first-child {
 }
 
 .illustration-v4 .thumb-product-purchase a {
-	color: #8bdccd;
+	color: var(--bg-color);
 }
 
 .illustration-v4 .thumb-product-purchase i {
 	top: 1px;
 	font-size: 16px;
 	position: relative;
+	cursor: pointer;
 }
 
 .illustration-v4 .thumb-product-purchase a:hover {
-	color: #18ba9b;
+	color: var(--line-color);
 	text-decoration: none;
 }
-
+.illustration-v4 .thumb-product-purchase .heart-light{
+	color: red;
+}
 /*Owl Carousel v2
 ------------------------------------*/
 .owl-slider-v2 .owl-wrapper-outer {
   	margin-bottom: 20px;
 }
-
+.owl-item .item {
+	width: 270px ;
+	background-color: #fff;
+}
+.owl-item .item .product-img img{
+	width: 100%;
+}
 .owl-slider-v2 .item {
   	margin: 0 10px;
   	text-align: center;
 	padding: 7px 0;
 	position: relative;
   	border: 1px solid #e4e2e2;
+	
+}
+.illustration-v2_item .product-img img{
+	background-color: #333;
+	width: 100%;
 }
 
 .owl-slider-v2 .item img {
-  	width: 150px;
+  	width: 100%;
   	height: auto;
 }
 
