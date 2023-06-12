@@ -1,0 +1,132 @@
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		var readURL = function(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function(e) {
+					$('.avatar').attr('src', e.target.result);
+				}
+
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
+		$(".file-upload").on('change', function() {
+			readURL(this);
+		});
+	});
+
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Account</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<link rel="stylesheet" href="./css/myaccount.css">
+<body>
+	<div class="container-md px-4">
+		<!-- <hr class="mt-0 mb-4"> -->
+		<div class="row center">
+			<div class="col-md-3">
+				<!-- Profile picture card-->
+				<div class="card mb-4 mb-md-0">
+					<div class="card-header">Profile Picture</div>
+					<div class="card-body text-center">
+						<!-- Profile picture image-->
+						<img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar8.png" alt="">
+						<!-- Profile picture help block-->
+						<div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+						<!-- Profile picture upload button-->
+						<!-- <button class="btn btn-primary" type="button">Upload new image</button> -->
+						<input type="file">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<!-- Account details card-->
+				<div class="card mb-4">
+					<div class="card-header">Account Details</div>
+					<div class="card-body">
+						<form>
+							<!-- Form Group (username)-->
+							<div class="mb-3">
+								<label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the site)</label>
+								<input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="">
+							</div>
+							<!-- Form Row-->
+							<div class="row gx-3 mb-3">
+								<!-- Form Group (first name)-->
+								<div class="col-md-6">
+									<label class="small mb-1" for="inputFirstName">First name</label>
+									<input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="">
+								</div>
+								<!-- Form Group (last name)-->
+								<div class="col-md-6">
+									<label class="small mb-1" for="inputLastName">Last name</label>
+									<input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="">
+								</div>
+							</div>
+							<!-- Form Row        -->
+							<div class="row gx-3 mb-3">
+								<!-- Form Group (location)-->
+								<div class="col-md-12">
+									<label class="small mb-1" for="inputLocation">Location</label>
+									<input class="form-control" id="inputLocation" type="text" placeholder="Enter your location" value="">
+								</div>
+							</div>
+							<!-- Form Group (email address)-->
+							<div class="mb-3">
+								<label class="small mb-1" for="inputEmailAddress">Email address</label>
+								<input class="form-control" id="inputEmailAddress" type="email" placeholder="name@example.com" value="">
+							</div>
+							<!-- Form Row-->
+							<div class="row gx-3 mb-3">
+								<!-- Form Group (phone number)-->
+								<div class="col-md-6">
+									<label class="small mb-1" for="inputPhone">Phone number</label>
+									<input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="">
+								</div>
+								<!-- Form Group (birthday)-->
+								<div class="col-md-6">
+									<label class="small mb-1" for="inputBirthday">Birthday</label>
+									<input class="form-control" id="inputBirthday" type="date" name="birthday" placeholder="Enter your birthday" value="">
+								</div>
+							</div>
+							<!-- Save changes button-->
+							<button class="btn btn-primary" type="button">Save changes</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
