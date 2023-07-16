@@ -50,13 +50,13 @@ public class ProductAddController extends HttpServlet {
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 			for (FileItem item : items) {
 				if (item.getFieldName().equals("name")) {
-					product.setName(item.getString());
+					product.setName(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("category")) {
-					product.setCategory(categoryService.get(Integer.parseInt(item.getString())));
+					product.setCategory(categoryService.get(Integer.parseInt(item.getString("UTF-8"))));
 				} else if (item.getFieldName().equals("price")) {
-					product.setPrice(Long.parseLong(item.getString()));
+					product.setPrice(Long.parseLong(item.getString("UTF-8")));
 				} else if (item.getFieldName().equals("des")) {
-					product.setDes(item.getString());
+					product.setDes(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("image")) {
 //					String currentPath = getServletContext().getRealPath(getServletInfo());
 //					final String dir =  currentPath + "upload";
@@ -66,7 +66,7 @@ public class ProductAddController extends HttpServlet {
 //					String fileName = System.currentTimeMillis() + "." + ext;
 //					File file = new File(dir + "/" + fileName);
 //					item.write(file);
-					product.setImage(item.getString());
+					product.setImage(item.getString("UTF-8"));
 				}
 			}
 

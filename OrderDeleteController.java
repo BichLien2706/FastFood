@@ -16,7 +16,7 @@ public class OrderDeleteController extends HttpServlet {
 	CartItemService cartItemService=new CartServiceItemImpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id= req.getParameter("id");
+		int id = Integer.parseInt(req.getParameter("id"));
 		cartItemService.delete(id);
 		resp.sendRedirect(req.getContextPath()+"/admin/order/list");
 

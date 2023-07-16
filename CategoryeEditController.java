@@ -17,6 +17,7 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import com.thanhhc.model.Category;
+import com.thanhhc.model.Product;
 import com.thanhhc.model.User;
 import com.thanhhc.service.CategoryService;
 import com.thanhhc.service.UserService;
@@ -34,19 +35,34 @@ public class CategoryeEditController extends HttpServlet {
 		
 		req.setAttribute("category", category);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/category/edit-category.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/edit-category.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		Category category = new Category();
-		category.setId(Integer.parseInt(req.getParameter("id")));
-		category.setName(req.getParameter("name"));
-		cateService.edit(category);
-		
-		resp.sendRedirect(req.getContextPath()+"/admin/category/list");
 
+		req.setCharacterEncoding("UTF-8");
+		Category category = new Category();
+		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
+
+		try {
+			List<FileItem> items = servletFileUpload.parseRequest(req);
+
+			for (FileItem item : items) {
+				if (item.getFieldName().equals("id")) {
+					category.setId(Integer.parseInt(item.getString()));
+				} else if (item.getFieldName().equals("name")) {
+					category.setName(item.getString("UTF-8"));
+				}
+			cateService.edit(category);
+			}
+			resp.sendRedirect(req.getContextPath() + "/admin/category/list");
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

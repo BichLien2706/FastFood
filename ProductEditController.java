@@ -57,12 +57,12 @@ public class ProductEditController extends HttpServlet {
 				if (item.getFieldName().equals("id")) {
 					product.setId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("name")) {
-					product.setName(item.getString());
+					product.setName(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("cate")) {
-					product.setCategory(categoryService.get(item.getString()));
+					product.setCategory(categoryService.get(item.getString("UTF-8")));
 				} else if (item.getFieldName().equals("des")) {
-					System.out.println(item.getString());
-					product.setDes(item.getString());
+					System.out.println(item.getString("UTF-8"));
+					product.setDes(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("price")) {
 					product.setPrice(Long.parseLong(item.getString()));
 				} else if (item.getFieldName().equals("image")) {

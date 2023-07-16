@@ -17,34 +17,47 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import com.thanhhc.model.Category;
-import com.thanhhc.model.User;
 import com.thanhhc.service.CategoryService;
-import com.thanhhc.service.UserService;
 import com.thanhhc.service.impl.CategoryServiceImpl;
-import com.thanhhc.service.impl.UserServiceImpl;
 
 @WebServlet(urlPatterns = { "/admin/category/add" })
 public class CategoryAddController extends HttpServlet {
-	CategoryService cateService = new CategoryServiceImpl();
+	CategoryService categoryService = new CategoryServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/category/add-category.jsp");
+		List<Category> categories = categoryService.getAll();
+
+		req.setAttribute("categories", categories);
+
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/add-category.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String name = req.getParameter("name");
-		
-	
+
+		req.setCharacterEncoding("UTF-8");
 		Category category = new Category();
-		category.setName(name);
-		
+		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
 
-		cateService.insert(category);
+		try {
+			List<FileItem> items = servletFileUpload.parseRequest(req);
+			for (FileItem item : items) {
+				if (item.getFieldName().equals("name")) {
+					category.setName(item.getString());
+				}
+			}
 
-		resp.sendRedirect(req.getContextPath() + "/admin/category/list");
+			categoryService.insert(category);
+
+			resp.sendRedirect(req.getContextPath() + "/admin/category/list");
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 }

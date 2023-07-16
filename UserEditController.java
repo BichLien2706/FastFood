@@ -2,6 +2,8 @@ package com.thanhhc.controller.admin;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -36,6 +38,7 @@ public class UserEditController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		req.setCharacterEncoding("UTF-8");
 		User user = new User();
 		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
@@ -48,9 +51,17 @@ public class UserEditController extends HttpServlet {
 				} else if (item.getFieldName().equals("email")) {
 					user.setEmail(item.getString());
 				} else if (item.getFieldName().equals("username")) {
-					user.setUsername(item.getString());
+					user.setUsername(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("password")) {
 					user.setPassword(item.getString());
+				} else if (item.getFieldName().equals("dateOfBirth")) {
+					String dateString = item.getString();
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+					Date dateOfBirth = sdf.parse(dateString);
+					user.setDateOfBirth(dateOfBirth);
+				} else if (item.getFieldName().equals("address")) {
+				    user.setAddress(item.getString("UTF-8"));
+				    System.out.println(user.getAddress());
 				} else if (item.getFieldName().equals("role")) {
 					user.setRoleId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("avatar")) {
@@ -69,13 +80,14 @@ public class UserEditController extends HttpServlet {
 					}
 				}
 			}
-
+			System.out.println("zô");
 			userService.edit(user);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/user/list");
 		} catch (FileUploadException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
+			e.printStackTrace();
 			resp.sendRedirect(req.getContextPath() + "/admin/user/list");
 		}
 
